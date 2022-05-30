@@ -1,4 +1,4 @@
-function stopWatch() {
+function stopWatch(options) {
   function addMessage(message) {
     var messageElement = document.createElement('div');
     var now = new Date();
@@ -7,7 +7,13 @@ function stopWatch() {
     logElement.appendChild(messageElement);
   }
 
+  options = options || {};
+  var color = options.color || 'lightblue';
+  var backgroundColor = options.backgroundColor || 'black';
   var displayElement = document.getElementsByClassName('display')[0];
+  displayElement.style.color = color;
+  displayElement.style.backgroundColor = backgroundColor;
+
   var logElement = document.querySelector('.log');
   var timer = null;
   var seconds = 0;
@@ -38,4 +44,8 @@ function stopWatch() {
   });
 }
 
-stopWatch();
+var options = {
+  color: 'limegreen',
+  backgroundColor: '#333'
+};
+stopWatch(options);
