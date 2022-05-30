@@ -7,6 +7,13 @@ function stopWatch(options) {
     logElement.insertAdjacentElement('afterbegin', messageElement);
   }
 
+  function ramenTimer(seconds) {
+    oneMinutes = 60;
+    if (seconds === oneMinutes * 3) {
+      alert('ラーメンができました！');
+    }
+  }
+
   options = options || {};
   var color = options.color || 'lightblue';
   var backgroundColor = options.backgroundColor || 'black';
@@ -27,6 +34,7 @@ function stopWatch(options) {
       timer = setInterval(function() {
         seconds++;
         displayElement.innerText = seconds;
+        ramenTimer(seconds);
         console.log(seconds);
       }, 1000);
 
