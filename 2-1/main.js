@@ -14,8 +14,9 @@ const stopWatch = (i, options = {}) => {
     }
   }
 
-  const color = options.color || 'lightblue';
-  const backgroundColor = options.backgroundColor || 'black';
+  let {color, backgroundColor} = options;
+  color = color || 'lightblue';
+  backgroundColor = backgroundColor || 'black';
   const displayElement = document.getElementsByClassName('display')[i];
   displayElement.style.color = color;
   displayElement.style.backgroundColor = backgroundColor;
