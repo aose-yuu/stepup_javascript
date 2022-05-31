@@ -2,7 +2,7 @@ function stopWatch(i, options) {
   function addMessage(message) {
     const messageElement = document.createElement('div');
     const now = new Date();
-    messageElement.innerText = now.getHours() + '時' + now.getMinutes() + '分' + now.getSeconds() + '秒 ' + message;
+    messageElement.innerText = `${now.getHours()}時${now.getMinutes()}分${now.getSeconds()}秒 ${message}`;
     messageElement.classList = ['message'];
     logElement.insertAdjacentElement('afterbegin', messageElement);
   }
