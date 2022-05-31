@@ -1,5 +1,5 @@
-function stopWatch(i, options) {
-  function addMessage(message) {
+const stopWatch = (i, options) => {
+  const addMessage = (message) => {
     const messageElement = document.createElement('div');
     const now = new Date();
     messageElement.innerText = `${now.getHours()}時${now.getMinutes()}分${now.getSeconds()}秒 ${message}`;
@@ -7,7 +7,7 @@ function stopWatch(i, options) {
     logElement.insertAdjacentElement('afterbegin', messageElement);
   }
 
-  function ramenTimer(seconds) {
+  const ramenTimer = (seconds) => {
     const oneMinutes = 60;
     if (seconds === oneMinutes * 3) {
       alert('ラーメンができました！');
@@ -26,7 +26,7 @@ function stopWatch(i, options) {
   let seconds = 0;
 
   const startButton = document.getElementsByClassName('start-button')[i];
-  startButton.addEventListener('click', function() {
+  startButton.addEventListener('click', () => {
     startButton.disabled = true;
     stopButton.disabled = false;
     if (timer === null) {
@@ -44,7 +44,7 @@ function stopWatch(i, options) {
 
   const stopButton = document.getElementsByClassName('stop-button')[i];
   stopButton.disabled = true;
-  stopButton.addEventListener('click', function() {
+  stopButton.addEventListener('click', () => {
     startButton.disabled = false;
     stopButton.disabled = true;
     if (timer !== null) {
@@ -62,6 +62,6 @@ const options = {
   backgroundColor: '#333'
 };
 
-for (var i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {
   stopWatch(i, options);
 }
