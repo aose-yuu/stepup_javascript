@@ -1,4 +1,4 @@
-const stopWatch = (i, options) => {
+const stopWatch = (i, options = {}) => {
   const addMessage = (message) => {
     const messageElement = document.createElement('div');
     const now = new Date();
@@ -14,7 +14,6 @@ const stopWatch = (i, options) => {
     }
   }
 
-  options = options || {};
   const color = options.color || 'lightblue';
   const backgroundColor = options.backgroundColor || 'black';
   const displayElement = document.getElementsByClassName('display')[i];
