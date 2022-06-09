@@ -36,7 +36,7 @@ class PhotoViewer {
     frameElement.innerHTML = `
       <div class="currentImage">
       <p>${imageIndex}枚目</p>
-        <img src="${image}" alt="image">
+        <img src="${image}" alt="image" width="250" height="150">
       </div>
     `;
     console.log(imageIndex);

@@ -1,0 +1,30 @@
+.photoViewer {
+  margin: 0 auto;
+  width: 20em;
+}
+
+.text {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.actions {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.currentImage {
+  text-align: center;
+}
+
+.images {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
