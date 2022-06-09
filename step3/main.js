@@ -15,7 +15,17 @@ class PhotoViewer {
       this.next();
     });
 
+    this.renderImageUrls();
     this.updatePhoto();
+  }
+
+  renderImageUrls() {
+    const imagesElement = this.rootElement.querySelector('.images');
+    let imageUrlsHtml = '';
+    for (const image of this.images) {
+      imageUrlsHtml += `<li><a href="${image}" target="_blank">${image}</a></li>`;
+    }
+    imagesElement.innerHTML = imageUrlsHtml;
   }
 
   updatePhoto() {
@@ -55,7 +65,6 @@ class PhotoViewer {
     }, 4000);
   }
 }
-
 
 const images = [
   'https://fakeimg.pl/250x150/81DAF5',
